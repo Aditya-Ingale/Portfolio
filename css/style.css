@@ -48,7 +48,7 @@ body {
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     color: var(--main-color);
     font-weight: 600;
     cursor: default;
@@ -60,7 +60,15 @@ body {
     font-size: 1.7rem;
     color: var(--white-color);
     font-weight: 500;
-    margin-right: 3.5rem;
+    margin-right: 2rem;
+}
+
+.header.sticky .navbar a {
+    color: var(--text-color);
+}
+
+.header.sticky .navbar a.active {
+    color: var(--main-color);
 }
 
 .navbar a.active::before {
@@ -73,10 +81,20 @@ body {
     background: var(--white-color);
 } 
 
+.header.sticky .navbar a::before {
+    background: var(--main-color);
+    opacity: .7; 
+}
+
 #darkMode-icon {
     font-size: 2.4rem;
     color: var(--white-color);
     cursor: pointer;
+}
+
+.header.sticky #darkMode-icon {
+    color: var(--text-color);
+    opacity: .9;
 }
 
 section {
@@ -251,6 +269,7 @@ span {
 
 .about-img img {
     width: 40vw;
+    filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.6)); /* Shadow on the bottom-right edge */
 }
 
 .heading {
@@ -271,6 +290,58 @@ span {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
+
+.services {
+    min-height: auto;
+    padding-bottom: 1rem;
+}
+
+.services h2 {
+    margin-bottom: 2rem;
+}
+
+.services .services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+    gap: 2rem; /* Spacing between the grid items */
+    padding: 2rem; /* Optional: Padding for the container */
+}
+
+.services-container .services-box {
+    background: var(--bg-color);
+    padding: 2rem 1rem 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
+    text-align: center;
+    border-top: .6rem solid var(--main-color);
+    border-bottom: .6rem solid var(--main-color);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.services-container .services-box:hover{
+    box-shadow: 0 .1rem 2rem var(--shadow-color);
+    transform: scale(1.02);
+}
+
+.services-box i {
+    font-size: 5rem;
+    color: var(--main-color);
+}
+
+.services-box h3 {
+    font-size: 2.2rem;
+    transition: .5e ease;
+}
+
+.services-box:hover h3{
+    color: var(--main-color);
+}
+
+.services-box p {
+    font-size: 1.3rem;
+    margin: 1rem 0 2rem;
+}
+
 
 
 
