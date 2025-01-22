@@ -97,6 +97,12 @@ body {
     opacity: .9;
 }
 
+#menu-icon {
+    font-size: 3rem;
+    color: var(--text-color);
+    display: none;
+}
+
 section {
     min-height: 100;
     padding: 10rem 7% 2rem;
@@ -247,13 +253,10 @@ section {
 
 .home-img img {
     position: absolute; /* Enables precise positioning */
-    bottom: 5px; /* Initial position, can be adjusted */
-    right: 30px; /* Initial position, can be adjusted */
-    max-width: 70%; /* Ensures the image doesn't exceed its container */
-    max-height: 85%; /* Ensures the image height doesn't exceed its container */
-    width: auto; /* Maintain aspect ratio for resizing */
-    height: auto; /* Maintain aspect ratio for resizing */
-    pointer-events: none; /* Prevents the image from interfering with user interactions */
+    bottom: 0; /* Initial position, can be adjusted */
+    right: 0; /* Initial position, can be adjusted */
+    width: 100%;
+    pointer-events: none;
 }
 
 span {
@@ -497,4 +500,101 @@ span {
 .footer-iconTop a i {
     font-size: 2.4rem;
     color: #333;
+}
+
+/* BREAKPOINTS */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .home .profession-container {
+        height: 85.8rem;
+    }
+
+    .home .profession-container .profession-box {
+        right: -20rem;
+        height: 85.8rem;
+    }
+
+    .home .profession-container .overlay {
+        right: -16rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .navbar a:nth-child(1),
+    .navbar a:nth-child(2) {
+        color: var(--main-color);
+    }
+
+    .navbar a.active::before {
+        background: var(--main-color);
+        opacity: .7;
+    }
+
+    header {
+        padding: 6rem 9%;
+    }
+
+    section {
+        padding: 15rem 8% 6rem;
+    }
+
+    .home .profession-container .profession-box {
+        right: -32rem;
+    }
+
+    .home .profession-container .overlay {
+        right: -30rem;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .navbar a:nth-child(1),
+    .navbar a:nth-child(2),
+    .navbar a:nth-child(3) {
+        color: var(--main-color);
+    }
+
+    .navbar a.active::before {
+        background: var(--main-color);
+        opacity: .7;
+    }
+
+    .home .profession-container .profession-box {
+        right: -45rem;
+        height: 85.8rem;
+    }
+
+    .home .home-content {
+        max-width: 50rem;
+    }
+
+    .home .profession-container .portfolio-box {
+        right: -45rem;
+    }
+
+    .home .profession-container .overlay {
+        right: -39.5rem;
+    }
+
+    .home-img img {
+        display: none;
+    }
+
+    .servies,
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+
+    .contact {
+        min-height: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
 }
