@@ -291,23 +291,24 @@ span {
     margin: 2rem 0 3rem;
 }
 
-.services {
+.educations {
     min-height: auto;
     padding-bottom: 1rem;
 }
 
-.services h2 {
+.educations h2 {
     margin-bottom: 2rem;
 }
 
-.services .services-container {
+.educations .educations-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
     gap: 2rem; /* Spacing between the grid items */
     padding: 2rem; /* Optional: Padding for the container */
 }
 
-.services-container .services-box {
+/* Styles for the service boxes */
+.educations-container .educations-box {
     background: var(--bg-color);
     padding: 2rem 1rem 3rem;
     border-radius: 2rem;
@@ -318,26 +319,26 @@ span {
     transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
-.services-container .services-box:hover{
+.educations-container .educations-box:hover{
     box-shadow: 0 .1rem 2rem var(--shadow-color);
     transform: scale(1.02);
 }
 
-.services-box i {
+.educations-box i {
     font-size: 5rem;
     color: var(--main-color);
 }
 
-.services-box h3 {
+.educations-box h3 {
     font-size: 2.2rem;
     transition: .5e ease;
 }
 
-.services-box:hover h3{
+.educations-box:hover h3{
     color: var(--main-color);
 }
 
-.services-box p {
+.educations-box p {
     font-size: 1.3rem;
     margin: 1rem 0 2rem;
 }
