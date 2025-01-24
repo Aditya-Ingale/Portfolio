@@ -14,7 +14,7 @@
 :root {
     --bg-color: #fdfdfd;
     --text-color: #333;
-    --main-color: #754ef9;
+    --main-color: #00ABE4;
     --white-color: #fdfdfd;
     --shadow-color: rgb(0, 0, 0, .2);
 }
@@ -135,11 +135,12 @@ section {
 .home-content h1 {
     font-size: 5.6rem;
     font-weight: 700;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .home-content p {
     font-size: 1.6rem;
+    text-align: justify;
 }
 
 .home-content .social-media a {
@@ -179,7 +180,7 @@ section {
 
 .btn:hover {
     background: transparent;
-    color: var(--main-color);
+    color: var(--white-color);
     border-color: var(--main-color);
 }
 
@@ -284,10 +285,11 @@ section {
 
 .home-img img {
     position: absolute; /* Enables precise positioning */
-    bottom: 0; /* Initial position, can be adjusted */
+    bottom: -5px; /* Initial position, can be adjusted */
     right: 0; /* Initial position, can be adjusted */
-    width: 100%;
-    pointer-events: none;
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    pointer-events: none; /* Prevent interaction */
 }
 
 span {
@@ -301,9 +303,23 @@ span {
     gap: 4rem;
 }
 
+.about-img {
+    display: inline-block; /* Ensure the image is treated as inline and not as a block element */
+}
+
 .about-img img {
-    width: 40vw;
-    filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.6)); /* Shadow on the bottom-right edge */
+    width: 40vw; /* Adjust image size */
+    filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.6)); /* Shadow effect on the visible part */
+    animation: levitate 3s ease-in-out infinite; /* Levitation animation */
+}
+
+@keyframes levitate {
+    0%, 100% {
+        transform: translateY(0); /* Default position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up slightly */
+    }
 }
 
 .heading {
@@ -323,6 +339,7 @@ span {
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+    text-align: justify;
 }
 
 .educations {
@@ -344,7 +361,7 @@ span {
 /* Styles for the service boxes */
 .educations-container .educations-box {
     background: var(--bg-color);
-    padding: 2rem 1rem 3rem;
+    padding: 4rem 2rem 6rem;
     border-radius: 2rem;
     box-shadow: 0 .1rem .5rem var(--shadow-color);
     text-align: center;
@@ -374,7 +391,7 @@ span {
 
 .educations-box p {
     font-size: 1.3rem;
-    margin: 1rem 0 2rem;
+    margin: 0.5rem 0 0.5rem;
 }
 
 .experience {
@@ -382,10 +399,12 @@ span {
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    margin: 4rem 0; /* Optional: Adds spacing above and below the section */
 }
 
 .experience-img img {
     width: 40vw;
+    height: auto;
     filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.6)); /* Shadow on the bottom-right edge */
 }
 
@@ -397,15 +416,54 @@ span {
 .experience-content h2 {
     text-align: left;
     line-height: 1.2;
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem; /* Space between heading and content */
 }
 
 .experience-content h3 {
     font-size: 2rem;
+    margin-bottom: 1rem 0; /* Adds space below the role */
+}
+
+.experience-content h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem 0; /* Adds space below the role */
 }
 
 .experience-content p {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.experience-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
     font-size: 1.6rem;
-    margin: 2rem 0 3rexperiences
+    padding-left: 20px;
+}
+
+.experience-content ul li {
+    margin-bottom: 1rem; /* Adds space between list items */
+}
+
+strong {
+    color: #000000; /* Makes key metrics stand out */
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
 }
 
 .portfolio {
@@ -747,7 +805,7 @@ span {
 
     .home .profession-container .profession-box {
         position: fixed;
-        top: 40%;
+        top: 60%;
         left: 0;
         border-radius: 0;
         width: 100%;
@@ -757,11 +815,10 @@ span {
         padding: 0 13px;
         left: auto;
         transform-origin: 0;
-        background: transparent;
     }
 
     .home .profession-box .profession:nth-child(1){
-        transform: rotate(-90deg) translate(-120px, -210px);
+        transform: rotate(-90deg) translate(-75px, -260px);
     }
 
     .home .profession-box .profession:nth-child(1) i{
@@ -773,11 +830,11 @@ span {
     }
 
     .home .profession-box .profession:nth-child(3){
-        transform: rotate(90deg) translate(-115px, -450px);
+        transform: rotate(90deg) translate(-105px, -440px);
     }
 
     .home .profession-box .profession:nth-child(4){
-        transform: rotate(180deg) translate(-220px, -335px);
+        transform: rotate(180deg) translate(-180px, -335px);
     }
 
     .home .profession-box .circle {
