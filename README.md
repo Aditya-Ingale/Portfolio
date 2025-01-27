@@ -2,6 +2,10 @@
 
 This is my personal portfolio website, designed to showcase my skills, projects, and contact information. It is a responsive and visually appealing website created using **HTML**, **CSS**, and **JavaScript**.
 
+## Screenshots
+
+![Portfolio Screenshot](./images/screenshot.png)
+
 ## Features
 
 - **About Me**: 
@@ -9,7 +13,7 @@ This is my personal portfolio website, designed to showcase my skills, projects,
     - **Skills**: Proficient in C++, Python, HTML, CSS, JavaScript, Flask, PostgreSQL, Git, and Figma.
     - **Certifications**: Python for Data Science, Flask Framework, and Core Java.
     - **Passion**: Software Development and Machine Learning, with hands-on experience in DSA, Web Development, and Data Science projects.
-- **Contact Section**: Links to my social profiles and a contact form.
+- **Contact Section**:
     - **Email**: adityaa.ingale@gmail.com
 - **Responsive Design**: Optimized for different screen sizes and devices.
 - **Smooth Animations**: Enhanced user experience with animations and scroll effects.
