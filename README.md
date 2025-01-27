@@ -4,7 +4,7 @@ This is my personal portfolio website, designed to showcase my skills, projects,
 
 ## Screenshots
 
-![Portfolio Screenshot](./images/screenshot.png)
+![Portfolio Screenshot](./images/Screenshot.png)
 
 ## Features
 
